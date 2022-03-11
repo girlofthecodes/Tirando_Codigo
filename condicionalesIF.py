@@ -128,3 +128,70 @@ if b2 >= 1:
     print(str(b2) + " moneda" + ('s' if (b2) > 1 else '') + " de 2")
 if b1 >= 1:
     print(str(b1) + " moneda" + ('s' if (b1) > 1 else '') + " de 1")
+
+#Ejercicio 72, 73 y 74 
+print("""\n
+Diseña un programa Python que lea un caracter cualquiera desde el teclado, y muestre el mensaje 'Es una MAYUSCULA'
+cuando el caracter sea una letra mayuscula y el mensaje 'Es una MINUSCULA' cuando sea una minuscula. En cualquier otro
+caso, no mostrar mensaje alguno. (Considera unicamente letras del alfabeto ingles.) Pista: aunque parezca una obviedad,
+recuerda que una letra es minusculas si esta entre la ’a’ y la ’z’, y mayusculas si esta entre la ’A’ y la ’Z’.       
+""")
+caracter = input("Ingresa un caracter: ")
+minusculas = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+               'u','v','w', 'x', 'y', 'z']
+
+mayusculas = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 
+              'U', 'V', 'W', 'X', 'Y', 'Z']
+
+if caracter in minusculas or caracter == 'ñ': 
+    print("Es una MINUSCULA")
+elif caracter in mayusculas or caracter == 'Ñ': 
+    print("Es una MAYUSCULA")
+else: 
+    print("No es una letra")
+
+#Ejercico 80 
+print("""\n
+Diseña un programa que calcule el maximo de 5 numeros enteros. Si sigues una estrategia similar a la de la primera
+solucion propuesta para el problema del maximo de 3 numeros, tendras problemas. Intenta resolverlo como en el ultimo
+programa de ejemplo, es decir con un 'candidato a valor maximo' que se va actualizando al compararse con cada numero.
+""")
+lista = []
+for numeros in range(1, 6): 
+    numero = int(input(f"Ingresa el numero {numeros}: "))
+    
+    lista.append(numero)
+lista.sort()
+lista.reverse()
+print(lista)
+
+#Ejercicio 86 
+print("""
+Diseña un programa que, dado un numero real que debe representar la calificacion numerica de un examen, proporcione
+la calificacion cualitativa correspondiente al numero dado. La calificacion cualitativa seria una de las siguientes: 
+'Suspenso'(nota menor que 5), 'Aprobado' (nota mayor o igual que 5, pero menor que 7), 'Notable' (nota mayor o igual que 7, 
+pero menor que 8.5), 'Sobresaliente' (nota mayor o igual que 8.5, pero menor que 10), 'Matricula de Honor' (nota 10).
+""")
+calificacion = float(input("Calificación obtenida en el examen: "))
+if calificacion < 5: 
+    print(f"{calificacion} -> SUSPENSO")
+elif calificacion >= 5 and calificacion < 7: 
+    print(f"{calificacion} -> APROBADO")
+elif calificacion >= 7 and calificacion < 8.5: 
+    print("{calificacion} -> NOTABLE")
+elif calificacion >= 8.5 and calificacion <10: 
+    print(f"{calificacion} -> SOBRESALIENTE")
+elif calificacion == 10: 
+    print(f"{calificacion} -> MATRICULA DE HONOR")
+else: 
+    print(f"{calificacion} Calificacion Invalida")
+    
+#Ejercico 103
+print("""
+Implementa un programa que muestre todos los multiplos de 6 entre 6 y 150, ambos inclusive
+""")
+for i in range(0, 151, 6):
+    print(f"{i} es multilo de 6")
+
+
+    
