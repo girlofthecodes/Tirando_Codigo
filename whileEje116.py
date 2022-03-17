@@ -283,7 +283,9 @@ while opcion != 9:
             break
         else: 
             print("Opcion no reconocida")
-    elif opcion == 9: 
+    elif opcion > 9: 
+        print("Opcion invalida ")
         break
 else: 
     exit()
+    
